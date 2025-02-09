@@ -4310,6 +4310,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -4393,7 +4394,6 @@
               ]
             },
             "id": "89995fe9-dfc3-429c-8e69-d99edd17d3d3",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Administrator",
@@ -4426,6 +4426,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -4509,7 +4510,6 @@
               ]
             },
             "id": "26439e26-f577-4479-97ca-da3aeb359f82",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Registration Form",
@@ -4545,6 +4545,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -4628,7 +4629,6 @@
               ]
             },
             "id": "f49d80a7-ff4e-49e7-9aca-24668b33d41a",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Load from CSV",
@@ -4664,6 +4664,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -4747,7 +4748,6 @@
               ]
             },
             "id": "6123f90c-6ed9-4abe-a0a3-e62235f1c0b4",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Web Application",
@@ -4761,8 +4761,8 @@
           },
           {
             "position": {
-              "x": 176.25,
-              "y": 330
+              "x": 180,
+              "y": 360
             },
             "size": {
               "width": 120,
@@ -4783,6 +4783,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -4866,7 +4867,6 @@
               ]
             },
             "id": "0982ec48-093f-4940-9128-7845bbd3e5e2",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "MongoDB",
@@ -5223,6 +5223,70 @@
               {
                 "x": 290,
                 "y": 300
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Web Application",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Web Application"
+            ],
+            "id": "bd9a50f7-49ed-4a71-9bcd-93af044dc79a",
+            "source": {
+              "x": 620,
+              "y": 30
+            },
+            "target": {
+              "x": 650,
+              "y": 440
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Database Server",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Database Server"
+            ],
+            "id": "1c6958de-c360-4fff-90b6-f9b5015f7616",
+            "source": {
+              "x": 120,
+              "y": 370
+            },
+            "target": {
+              "x": 390,
+              "y": 390
+            },
+            "vertices": [
+              {
+                "x": 250,
+                "y": 320
               }
             ]
           }

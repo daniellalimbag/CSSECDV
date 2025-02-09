@@ -1041,15 +1041,7 @@
             "vertices": [
               {
                 "x": 700,
-                "y": 330
-              },
-              {
-                "x": 630,
-                "y": 480
-              },
-              {
-                "x": 620,
-                "y": 500
+                "y": 320
               }
             ]
           },
@@ -1083,17 +1075,7 @@
                 "x": 420,
                 "y": 350
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           }
         ]
       },

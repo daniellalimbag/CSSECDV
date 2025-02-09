@@ -2147,7 +2147,7 @@
         "cells": [
           {
             "position": {
-              "x": 970,
+              "x": 1000,
               "y": 180
             },
             "size": {
@@ -4212,6 +4212,70 @@
               {
                 "x": 400,
                 "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Web Application",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Web Application"
+            ],
+            "id": "0d2508f1-5a25-415a-8724-1728873ef278",
+            "source": {
+              "x": 920,
+              "y": 10
+            },
+            "target": {
+              "x": 930,
+              "y": 450
+            },
+            "vertices": [
+              {
+                "x": 950,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Database Server",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Database Server"
+            ],
+            "id": "516edb7e-e880-4276-ac9d-93784626d0a6",
+            "source": {
+              "x": 590,
+              "y": 410
+            },
+            "target": {
+              "x": 830,
+              "y": 430
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 360
               }
             ]
           }

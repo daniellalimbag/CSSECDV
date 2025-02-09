@@ -1015,44 +1015,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              {
-                "attrs": {
-                  "label": {
-                    "text": "Trust Boundary"
-                  }
-                }
-              }
-            ],
-            "id": "b252e286-eee4-4f6f-973f-3b7e2d5af4c0",
-            "source": {
-              "x": 680,
-              "y": 100
-            },
-            "target": {
-              "x": 600,
-              "y": 530
-            },
-            "vertices": [
-              {
-                "x": 700,
-                "y": 320
-              }
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
               "name": "Database Server",
               "description": "",
               "isTrustBoundary": true,
@@ -1073,6 +1035,38 @@
             "vertices": [
               {
                 "x": 420,
+                "y": 350
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Web Application",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Web Application"
+            ],
+            "id": "b9f44ae4-a16c-4584-bd1f-f280c0c242d5",
+            "source": {
+              "x": 680,
+              "y": 130
+            },
+            "target": {
+              "x": 620,
+              "y": 510
+            },
+            "vertices": [
+              {
+                "x": 700,
                 "y": 350
               }
             ]

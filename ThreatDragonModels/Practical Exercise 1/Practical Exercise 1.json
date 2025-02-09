@@ -3097,8 +3097,8 @@
           },
           {
             "position": {
-              "x": 449,
-              "y": 350
+              "x": 415,
+              "y": 360
             },
             "size": {
               "width": 60,
@@ -3216,8 +3216,8 @@
           },
           {
             "position": {
-              "x": 230,
-              "y": 180
+              "x": 130,
+              "y": 170
             },
             "size": {
               "width": 60,
@@ -3928,8 +3928,8 @@
             },
             "vertices": [
               {
-                "x": 360,
-                "y": 240
+                "x": 330,
+                "y": 210
               }
             ]
           },
@@ -3978,8 +3978,8 @@
             },
             "vertices": [
               {
-                "x": 260,
-                "y": 120
+                "x": 200,
+                "y": 110
               }
             ]
           },
@@ -4180,6 +4180,38 @@
               {
                 "x": 360,
                 "y": 420
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Data Encryption",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Data Encryption"
+            ],
+            "id": "601c40bd-3bbd-4075-8bfa-96aac0acb5b3",
+            "source": {
+              "x": 540,
+              "y": 30
+            },
+            "target": {
+              "x": 560,
+              "y": 450
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": 220
               }
             ]
           }

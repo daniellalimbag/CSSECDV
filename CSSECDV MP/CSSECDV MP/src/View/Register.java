@@ -1,6 +1,10 @@
 
 package View;
 
+import Controller.SQLite;
+
+import javax.swing.*;
+
 public class Register extends javax.swing.JPanel {
 
     public Frame frame;
@@ -97,9 +101,41 @@ public class Register extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed
-        frame.registerAction(usernameFld.getText(), passwordFld.getText(), confpassFld.getText());
+        String username = usernameFld.getText().trim();
+        String password = passwordFld.getText().trim();
+        String confirmPassword = confpassFld.getText().trim();
+
+        // Validation checks
+        if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "All fields are required.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (password.length() < 6) {
+            JOptionPane.showMessageDialog(this, "Password must be at least 6 characters long.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (!password.equals(confirmPassword)) {
+            JOptionPane.showMessageDialog(this, "Passwords do not match.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        //Use Regex for Validation
+        if (!password.matches("^(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{6,}$")) {
+            JOptionPane.showMessageDialog(this, "Password must contain at least one uppercase letter, one number, and one special character.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        //Check if username exists in database
+        SQLite sqlite = new SQLite();
+        if (sqlite.usernameExists(username)) {
+            JOptionPane.showMessageDialog(this, "Username already exists. Please choose another.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        frame.registerAction(username, password, confirmPassword);
         frame.loginNav();
-    }//GEN-LAST:event_registerBtnActionPerformed
+    }  //GEN-LAST:event_registerBtnActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         frame.loginNav();

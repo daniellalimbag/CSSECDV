@@ -337,4 +337,21 @@ public class SQLite {
         }
         return false;
     }
+
+    public boolean usernameExists(String username) {
+        String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
+
+        try (Connection conn = DriverManager.getConnection(driverURL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
+
 }

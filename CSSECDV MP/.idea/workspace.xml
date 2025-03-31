@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="373731ff-1d0f-430b-bd61-7d14e7287251" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/CSSECDV.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/__sqlite_jdbc_3_23_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_23_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_23_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSSECDV MP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSSECDV MP/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSSECDV MP/src/Controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSSECDV MP/src/View/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/CSSECDV MP/src/View/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/Controller/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/Controller/SQLite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/Model/History.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/Model/Logs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/Model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/Model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/AdminHome$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/AdminHome$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/AdminHome$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/AdminHome$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/AdminHome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ClientHome$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ClientHome$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ClientHome$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ClientHome$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ClientHome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Frame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Frame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Frame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Frame$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Frame$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Frame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Home.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Login$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Login$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ManagerHome$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ManagerHome$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ManagerHome$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ManagerHome$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/ManagerHome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtHistory$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtHistory$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtHistory$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtLogs$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtLogs$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtLogs$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtLogs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtProduct$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtProduct$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtProduct$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtProduct$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtProduct$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtUser$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtUser$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtUser$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtUser$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtUser$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/MgmtUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Register$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Register$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/StaffHome$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/StaffHome$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/StaffHome$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/StaffHome$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSSECDV MP/View/StaffHome.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2v29rH9aSY9BglOzRT9oHyx30GR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Daniella/OneDrive/Documents/GitHub/CSSECDV/CSSECDV MP/CSSECDV MP"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="373731ff-1d0f-430b-bd61-7d14e7287251" name="Changes" comment="" />
+      <created>1743332498957</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743332498957</updated>
+    </task>
+    <servers />
+  </component>
+</project>

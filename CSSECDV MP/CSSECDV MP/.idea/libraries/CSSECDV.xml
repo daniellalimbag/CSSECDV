@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="CSSECDV">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/CSSECDV MP/dist/CSSECDV.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/CSSECDV.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

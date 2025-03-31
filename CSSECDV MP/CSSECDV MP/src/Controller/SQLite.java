@@ -4,11 +4,8 @@ import Model.History;
 import Model.Logs;
 import Model.Product;
 import Model.User;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
+import java.sql.*;
 import java.util.ArrayList;
 
 public class SQLite {
@@ -316,5 +313,21 @@ public class SQLite {
             System.out.print(ex);
         }
         return product;
+    }
+
+    public boolean validateUser(String username, String password) {
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+        try (Connection conn = DriverManager.getConnection(driverURL);
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+
+            ResultSet rs = pstmt.executeQuery();
+            return rs.next();
+        } catch (Exception ex) {
+            System.out.print(ex);
+        }
+        return false;
     }
 }

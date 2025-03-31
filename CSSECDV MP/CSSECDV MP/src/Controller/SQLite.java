@@ -4,7 +4,7 @@ import Model.History;
 import Model.Logs;
 import Model.Product;
 import Model.User;
-
+import org.mindrot.jbcrypt.BCrypt;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -180,12 +180,12 @@ public class SQLite {
     }
     
     public void addUser(String username, String password) {
-        String sql = "INSERT INTO users(username,password) VALUES(?,?)";
-        
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        String sql = "INSERT INTO users(username, password) VALUES(?, ?)";
         try (Connection conn = DriverManager.getConnection(driverURL);
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, username);
-            pstmt.setString(2, password);
+            pstmt.setString(2, hashedPassword);
             pstmt.executeUpdate();
         } catch (Exception ex) {
             System.out.print(ex);
@@ -318,18 +318,22 @@ public class SQLite {
         return product;
     }
 
-    public boolean validateUser(String username, String password) {
-        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+    public boolean validateUser(String username, String enteredPassword) {
+        String sql = "SELECT password FROM users WHERE username = ?";
 
         try (Connection conn = DriverManager.getConnection(driverURL);
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, username);
-            pstmt.setString(2, password);
 
+            pstmt.setString(1, username);
             ResultSet rs = pstmt.executeQuery();
-            return rs.next();
+
+            if (rs.next()) {
+                String storedHashedPassword = rs.getString("password");
+
+                return BCrypt.checkpw(enteredPassword, storedHashedPassword);
+            }
         } catch (Exception ex) {
-            System.out.print(ex);
+            ex.printStackTrace();
         }
         return false;
     }

@@ -166,29 +166,27 @@ public class SQLite {
     }
     
     public void addProduct(String name, int stock, double price) {
-        String sql = "INSERT INTO product(name,stock,price) VALUES('" + name + "','" + stock + "','" + price + "')";
-        
+        String sql = "INSERT INTO product(name, stock, price) VALUES(?, ?, ?)";
+
         try (Connection conn = DriverManager.getConnection(driverURL);
-            Statement stmt = conn.createStatement()){
-            stmt.execute(sql);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, name);
+            pstmt.setInt(2, stock);
+            pstmt.setDouble(3, price);
+            pstmt.executeUpdate();
         } catch (Exception ex) {
             System.out.print(ex);
         }
     }
     
     public void addUser(String username, String password) {
-        String sql = "INSERT INTO users(username,password) VALUES('" + username + "','" + password + "')";
+        String sql = "INSERT INTO users(username,password) VALUES(?,?)";
         
         try (Connection conn = DriverManager.getConnection(driverURL);
-            Statement stmt = conn.createStatement()){
-            stmt.execute(sql);
-            
-//      PREPARED STATEMENT EXAMPLE
-//      String sql = "INSERT INTO users(username,password) VALUES(?,?)";
-//      PreparedStatement pstmt = conn.prepareStatement(sql)) {
-//      pstmt.setString(1, username);
-//      pstmt.setString(2, password);
-//      pstmt.executeUpdate();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            pstmt.executeUpdate();
         } catch (Exception ex) {
             System.out.print(ex);
         }
@@ -277,38 +275,43 @@ public class SQLite {
     }
     
     public void addUser(String username, String password, int role) {
-        String sql = "INSERT INTO users(username,password,role) VALUES('" + username + "','" + password + "','" + role + "')";
-        
+        String sql = "INSERT INTO users(username, password, role) VALUES(?, ?, ?)";
+
         try (Connection conn = DriverManager.getConnection(driverURL);
-            Statement stmt = conn.createStatement()){
-            stmt.execute(sql);
-            
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+            pstmt.setInt(3, role);
+            pstmt.executeUpdate();
         } catch (Exception ex) {
             System.out.print(ex);
         }
     }
     
     public void removeUser(String username) {
-        String sql = "DELETE FROM users WHERE username='" + username + "';";
+        String sql = "DELETE FROM users WHERE username = ?";
 
         try (Connection conn = DriverManager.getConnection(driverURL);
-            Statement stmt = conn.createStatement()) {
-            stmt.execute(sql);
-            System.out.println("User " + username + " has been deleted.");
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.executeUpdate();
         } catch (Exception ex) {
             System.out.print(ex);
         }
     }
-    
+
     public Product getProduct(String name){
-        String sql = "SELECT name, stock, price FROM product WHERE name='" + name + "';";
+        String sql = "SELECT name, stock, price FROM product WHERE name = ?";
         Product product = null;
+
         try (Connection conn = DriverManager.getConnection(driverURL);
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql)){
-            product = new Product(rs.getString("name"),
-                                   rs.getInt("stock"),
-                                   rs.getFloat("price"));
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, name);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                product = new Product(rs.getString("name"), rs.getInt("stock"), rs.getFloat("price"));
+            }
         } catch (Exception ex) {
             System.out.print(ex);
         }

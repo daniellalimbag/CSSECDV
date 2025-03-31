@@ -1,12 +1,57 @@
 package View;
 
 import Controller.Main;
+import Model.User;
+
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import javax.swing.WindowConstants;
 
 public class Frame extends javax.swing.JFrame {
+    private User currentUser;
+
+    public User getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(User user) {
+        this.currentUser = user;
+        updateNavigation();
+    }
+
+    // Update navigation buttons based on user role
+    private void updateNavigation() {
+        adminBtn.setVisible(false);
+        managerBtn.setVisible(false);
+        staffBtn.setVisible(false);
+        clientBtn.setVisible(false);
+
+        if (currentUser != null) {
+            switch (currentUser.getRole()) {
+                case 5: //Admin
+                    adminBtn.setVisible(true);
+                    managerBtn.setVisible(true);
+                    staffBtn.setVisible(true);
+                    clientBtn.setVisible(true);
+                    break;
+                case 4: //Manager
+                    managerBtn.setVisible(true);
+                    staffBtn.setVisible(true);
+                    clientBtn.setVisible(true);
+                    break;
+                case 3: //Staff
+                    staffBtn.setVisible(true);
+                    clientBtn.setVisible(true);
+                    break;
+                case 2: //Client
+                    clientBtn.setVisible(true);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
     public Frame() {
         initComponents();

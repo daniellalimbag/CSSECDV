@@ -2,6 +2,7 @@
 package View;
 
 import Controller.SQLite;
+import Model.User;
 
 import javax.swing.*;
 
@@ -93,7 +94,12 @@ public class Login extends javax.swing.JPanel {
         SQLite db = new SQLite();
 
         if (db.validateUser(username, password)) {
-            frame.mainNav();
+            // Get the user's role and pass it to the frame
+            User currentUser = db.getUserByUsername(username);
+            if (currentUser != null) {
+                frame.setCurrentUser(currentUser);
+                frame.mainNav();
+            }
         } else {
             JOptionPane.showMessageDialog(this, "Invalid username or password", "Login Failed", JOptionPane.ERROR_MESSAGE);
         }

@@ -1,6 +1,5 @@
 package Controller;
 
-
 import Model.History;
 import Model.Logs;
 import Model.Product;
@@ -9,8 +8,7 @@ import View.Frame;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
-
-
+import org.mindrot.jbcrypt.BCrypt;
 
 public class Main {
     
@@ -26,7 +24,7 @@ public class Main {
 
 //        // Create a database
         sqlite.createNewDatabase();
-//        
+//
 //        // Drop users table if needed
         sqlite.dropHistoryTable();
         sqlite.dropLogsTable();
@@ -55,11 +53,11 @@ public class Main {
         sqlite.addProduct("Scanner", 10, 100.0);
 //
 //        // Add sample users
-        sqlite.addUser("admin", "qwerty1234" , 5);
-        sqlite.addUser("manager", "qwerty1234", 4);
-        sqlite.addUser("staff", "qwerty1234", 3);
-        sqlite.addUser("client1", "qwerty1234", 2);
-        sqlite.addUser("client2", "qwerty1234", 2);
+        sqlite.addUser("admin", hashPassword("qwerty1234") , 5);
+        sqlite.addUser("manager", hashPassword("qwerty1234"), 4);
+        sqlite.addUser("staff", hashPassword("qwerty1234"), 3);
+        sqlite.addUser("client1", hashPassword("qwerty1234"), 2);
+        sqlite.addUser("client2", hashPassword("qwerty1234"), 2);
 //        
 //        
 //        // Get users
@@ -104,5 +102,7 @@ public class Main {
         Frame frame = new Frame();
         frame.init(this);
     }
-    
+    public static String hashPassword(String password) {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
+    }
 }

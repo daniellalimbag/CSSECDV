@@ -1,6 +1,10 @@
 
 package View;
 
+import Controller.SQLite;
+
+import javax.swing.*;
+
 public class Login extends javax.swing.JPanel {
 
     public Frame frame;
@@ -82,8 +86,17 @@ public class Login extends javax.swing.JPanel {
                 .addContainerGap(126, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
-        frame.mainNav();
+    private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {
+        String username = usernameFld.getText();
+        String password = passwordFld.getText();
+
+        SQLite db = new SQLite();
+
+        if (db.validateUser(username, password)) {
+            frame.mainNav();
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid username or password", "Login Failed", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void registerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerBtnActionPerformed

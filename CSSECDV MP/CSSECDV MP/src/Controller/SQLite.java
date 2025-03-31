@@ -164,8 +164,8 @@ public class SQLite {
             System.out.print(ex);
         }
     }
-    
-    public void addProduct(String name, int stock, double price) {
+
+    public boolean addProduct(String name, int stock, double price) {
         String sql = "INSERT INTO product(name, stock, price) VALUES(?, ?, ?)";
 
         try (Connection conn = DriverManager.getConnection(driverURL);
@@ -173,10 +173,15 @@ public class SQLite {
             pstmt.setString(1, name);
             pstmt.setInt(2, stock);
             pstmt.setDouble(3, price);
-            pstmt.executeUpdate();
+            int affectedRows = pstmt.executeUpdate();
+
+            if (affectedRows > 0) {
+                return true;
+            }
         } catch (Exception ex) {
-            System.out.print(ex);
+            ex.printStackTrace();
         }
+        return false;
     }
     
     public void addUser(String username, String password) {

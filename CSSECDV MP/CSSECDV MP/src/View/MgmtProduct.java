@@ -200,7 +200,7 @@ public class MgmtProduct extends javax.swing.JPanel {
         designer(priceFld, "PRODUCT PRICE");
 
         Object[] message = {
-            "Insert New Product Details:", nameFld, stockFld, priceFld
+                "Insert New Product Details:", nameFld, stockFld, priceFld
         };
 
         int result = JOptionPane.showConfirmDialog(null, message, "ADD PRODUCT", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, null);
@@ -209,6 +209,33 @@ public class MgmtProduct extends javax.swing.JPanel {
             System.out.println(nameFld.getText());
             System.out.println(stockFld.getText());
             System.out.println(priceFld.getText());
+            String name = nameFld.getText().trim();
+            String stockStr = stockFld.getText().trim();
+            String priceStr = priceFld.getText().trim();
+
+            if (!name.matches("^[a-zA-Z0-9 ]{1,100}$")) {
+                JOptionPane.showMessageDialog(null, "Invalid product name! Only letters, numbers, and spaces allowed.");
+                return;
+            }
+            if (!stockStr.matches("^[1-9][0-9]*$")) {
+                JOptionPane.showMessageDialog(null, "Invalid stock! Enter a positive integer.");
+                return;
+            }
+            if (!priceStr.matches("^\\d+(\\.\\d{1,2})?$")) {
+                JOptionPane.showMessageDialog(null, "Invalid price! Enter a valid number.");
+                return;
+            }
+
+            int stock = Integer.parseInt(stockStr);
+            double price = Double.parseDouble(priceStr);
+
+            boolean success = sqlite.addProduct(name, stock, price);
+            if (success) {
+                JOptionPane.showMessageDialog(null, "Product added successfully!");
+                init();
+            } else {
+                JOptionPane.showMessageDialog(null, "Error adding product. Please try again.");
+            }
         }
     }//GEN-LAST:event_addBtnActionPerformed
 
